@@ -25,8 +25,9 @@
 |--------------|---------|----------------|
 | Python | Programming language | Used for the overall implementation of the project. |
 | OpenCV | Face detection | Detects and tracks faces in images and live video streams. |
-| scikit-image | Image processing and enhancement | Used for preprocessing static images — resizing, filtering, and improving image quality before analysis. |
+| os | Import Folders | Import folders and files from system. |
 | CustomTkinter | GUI creation | Builds a user interface that displays camera feed and predictions in real time. |
+| PIL | Image creation | Import and build image which can be handled with customtkinter library. |
 
 **Hardware/Environment:**
 Operating system: Windows.
@@ -45,23 +46,23 @@ Operating system: Windows.
 
 
 ### Week 3: Development Phase 2 and Testing
-- **Milestones:** Optimize detection accuracy and speed, start UI integration.
-- **Deliverables:** Trained model, performance report, initial testing results.
+- **Milestones:** Optimize detection accuracy, start UI integration.
+- **Deliverables:** Trained model, initial testing results.
 - **Assigned:** Habiba , Ali
 
 
 ### Week 4: Finalization and Presentation
 - **Milestones:** Integrate UI with models, finalize presentation.
-- **Deliverables:** Complete working system, presentation slides.
-- **Assigned:**  Ali
+- **Deliverables:** Complete working system.
+- **Assigned:**  Habiba , Ali
 
 **Overall Timeline Notes:** Weekly team meetings will be held to review progress and address challenges.
 
 ### Checklist for detailed tasks
 - [x] Set up environment and install dependencies.
-- [ ] Collect and preprocess dataset.
-- [ ] Build and test face detection model.
-- [ ] Design and test final user interface.
+- [x] Collect and preprocess dataset.
+- [x] Build and test face detection model.
+- [x] Design and test final user interface.
 
 ## Evaluation Criteria
 - **Success Metrics:** Face detection accuracy ≥ 90%. , Smooth and responsive real-time UI.
