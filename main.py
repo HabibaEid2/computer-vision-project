@@ -34,11 +34,10 @@ def showMainPage() :
         face = cv2.resize(face , (200 , 200))
         facesList.append(face)
 
-
     def openLiveCamera() : 
         cap = cv2.VideoCapture(0)
         while True : 
-            ret , frame = cap.read()
+            _ , frame = cap.read()
             gray_frame = cv2.cvtColor(frame , cv2.COLOR_BGR2GRAY)
             facesFounded = face_cascade.detectMultiScale(gray_frame , 1.3 , 5)
 
@@ -212,6 +211,7 @@ def registerPage() :
     registerPage._set_appearance_mode('light')
     registerPage.title('Face Detection And Recognition App')
     face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_alt.xml')
+
     # Image Section 
 
     imageFrame = ctk.CTkFrame(
@@ -258,7 +258,12 @@ def registerPage() :
     def showCamera() : 
         cap = cv2.VideoCapture(0)
         while True : 
-            ret , frame = cap.read()
+            _ , frame = cap.read()
+            # gray_frame = cv2.cvtColor(frame , cv2.COLOR_BAYER_BG2GRAY)
+            # face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_alt.xml')
+            # imgs = face_cascade.detectMultiScale(gray_frame , 1.3 , 5)
+            # (x , y , w , h) = imgs[0]
+            # cv2.rectangle(frame , (x , y) , (x + w , y + h) , (0 , 0 , 255) , 2)
             cv2.imshow('camera' , frame)
             if cv2.waitKey(1) == ord('k') :
                 global userImage 
